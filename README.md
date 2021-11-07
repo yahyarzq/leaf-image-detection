@@ -9,15 +9,15 @@
   
   Dataset Directory Details
   -------------------
-  >> Dataset
-      >> Daun Jambu
-          >> 001.jpg
-          >> 002.jpg
-          >> …
-      >> Daun Nangka
-          >> 001.jpg
-          >> 002.jpg
-          >> …
+    >> Dataset
+        >> Daun Jambu
+            >> 001.jpg
+            >> 002.jpg
+            >> …
+        >> Daun Nangka
+            >> 001.jpg
+            >> 002.jpg
+            >> …
 
 
 # To do List
