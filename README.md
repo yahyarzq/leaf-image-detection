@@ -28,7 +28,7 @@
 # To do List
   - [x] Collect Dataset 
   - [x] Create Metadata 
-  - [ ] Processing Data
+  - [x] Processing Data
   - [ ] Build Machine Learning
   - [ ] Training Model
   - [ ] Testing & Evaluation
