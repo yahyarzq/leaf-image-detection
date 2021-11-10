@@ -1,5 +1,10 @@
 # Leaf Image Detection
 
+
+# Image Classification
+  - Artificial Neural Network (ANN)
+  - Convolutional Neural Network (CNN)
+
 # Dataset
   Dataset requirement
   ------------------
@@ -22,7 +27,7 @@
 
 # To do List
   - [x] Collect Dataset 
-  - [ ] Create Metadata 
+  - [x] Create Metadata 
   - [ ] Processing Data
   - [ ] Build Machine Learning
   - [ ] Training Model
