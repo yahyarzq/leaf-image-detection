@@ -10,7 +10,7 @@ PATH_CWD = os.getcwd().replace("\\",'/')
 
 imdirDaunJambu = PATH_CWD +'/Dataset/Daun Jambu/'
 imdirDaunNangka = PATH_CWD + '/Dataset/Daun Nangka/'
-file_tag = 'Crop'
+file_tag = 'Rotate Image'
 
 def getAllFileInFolder(imdir,file_tag,fuct):
     # get all files in a folder
@@ -37,13 +37,16 @@ def getAllFileInFolder(imdir,file_tag,fuct):
         i+=1
 
 
-def imageCrop(image):
-    im_crop = image[100:660, 100:380]
-    return im_crop
+def imageRotate(image):
+    (h, w) = image.shape[:2]
+    center = (w/2, h/2)
+    M = cv2.getRotationMatrix2D(center, 180, 1.0)
+    rotated = cv2.warpAffine(image, M, (w,h))
+    return rotated
 
 def main():
-    getAllFileInFolder(imdirDaunJambu,file_tag,imageCrop)
-    getAllFileInFolder(imdirDaunNangka,file_tag,imageCrop)
+    getAllFileInFolder(imdirDaunJambu,file_tag,imageRotate)
+    getAllFileInFolder(imdirDaunNangka,file_tag,imageRotate)
 
 if __name__ == "__main__":
     main()

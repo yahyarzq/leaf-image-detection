@@ -10,7 +10,7 @@ PATH_CWD = os.getcwd().replace("\\",'/')
 
 imdirDaunJambu = PATH_CWD +'/Dataset/Daun Jambu/'
 imdirDaunNangka = PATH_CWD + '/Dataset/Daun Nangka/'
-file_tag = 'Crop'
+file_tag = 'Resize (Aspect Ratio)'
 
 def getAllFileInFolder(imdir,file_tag,fuct):
     # get all files in a folder
@@ -37,13 +37,15 @@ def getAllFileInFolder(imdir,file_tag,fuct):
         i+=1
 
 
-def imageCrop(image):
-    im_crop = image[100:660, 100:380]
-    return im_crop
+def imageResizeAspectRatio(image):
+    r = 400/image.shape[1]
+    dim = (400,int(image.shape[0]*r))
+    im_resized = cv2.resize(image, dim)
+    return im_resized
 
 def main():
-    getAllFileInFolder(imdirDaunJambu,file_tag,imageCrop)
-    getAllFileInFolder(imdirDaunNangka,file_tag,imageCrop)
+    getAllFileInFolder(imdirDaunJambu,file_tag,imageResizeAspectRatio)
+    getAllFileInFolder(imdirDaunNangka,file_tag,imageResizeAspectRatio)
 
 if __name__ == "__main__":
     main()

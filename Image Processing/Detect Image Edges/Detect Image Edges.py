@@ -3,6 +3,7 @@ import glob
 import re
 import os
 from pathlib import Path
+import numpy as np
 
 PATH = dir_path = os.path.dirname(os.path.realpath(__file__)).replace("\\",'/')
 #PATH = str(Path(__file__).resolve().parent).replace("\\",'/')
@@ -10,7 +11,7 @@ PATH_CWD = os.getcwd().replace("\\",'/')
 
 imdirDaunJambu = PATH_CWD +'/Dataset/Daun Jambu/'
 imdirDaunNangka = PATH_CWD + '/Dataset/Daun Nangka/'
-file_tag = 'Crop'
+file_tag = 'Detect Image Edges'
 
 def getAllFileInFolder(imdir,file_tag,fuct):
     # get all files in a folder
@@ -37,13 +38,13 @@ def getAllFileInFolder(imdir,file_tag,fuct):
         i+=1
 
 
-def imageCrop(image):
-    im_crop = image[100:660, 100:380]
-    return im_crop
+def imageDetectEdges(image):
+    im_edges = cv2.Canny(image, 100, 200)
+    return im_edges
 
 def main():
-    getAllFileInFolder(imdirDaunJambu,file_tag,imageCrop)
-    getAllFileInFolder(imdirDaunNangka,file_tag,imageCrop)
+    getAllFileInFolder(imdirDaunJambu,file_tag,imageDetectEdges)
+    getAllFileInFolder(imdirDaunNangka,file_tag,imageDetectEdges)
 
 if __name__ == "__main__":
     main()

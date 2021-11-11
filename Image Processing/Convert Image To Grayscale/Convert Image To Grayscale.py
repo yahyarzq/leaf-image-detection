@@ -3,6 +3,7 @@ import glob
 import re
 import os
 from pathlib import Path
+import numpy as np
 
 PATH = dir_path = os.path.dirname(os.path.realpath(__file__)).replace("\\",'/')
 #PATH = str(Path(__file__).resolve().parent).replace("\\",'/')
@@ -10,7 +11,7 @@ PATH_CWD = os.getcwd().replace("\\",'/')
 
 imdirDaunJambu = PATH_CWD +'/Dataset/Daun Jambu/'
 imdirDaunNangka = PATH_CWD + '/Dataset/Daun Nangka/'
-file_tag = 'Crop'
+file_tag = 'Grayscale'
 
 def getAllFileInFolder(imdir,file_tag,fuct):
     # get all files in a folder
@@ -37,13 +38,13 @@ def getAllFileInFolder(imdir,file_tag,fuct):
         i+=1
 
 
-def imageCrop(image):
-    im_crop = image[100:660, 100:380]
-    return im_crop
+def imageConvertGrayscale(image):
+    im_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    return im_gray
 
 def main():
-    getAllFileInFolder(imdirDaunJambu,file_tag,imageCrop)
-    getAllFileInFolder(imdirDaunNangka,file_tag,imageCrop)
+    getAllFileInFolder(imdirDaunJambu,file_tag,imageConvertGrayscale)
+    getAllFileInFolder(imdirDaunNangka,file_tag,imageConvertGrayscale)
 
 if __name__ == "__main__":
     main()
