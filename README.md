@@ -14,15 +14,27 @@
   
   Dataset Directory Details
   -------------------
-    >> Dataset
-        >> Daun Jambu
-            >> 001.jpg
-            >> 002.jpg
-            >> …
-        >> Daun Nangka
-            >> 001.jpg
-            >> 002.jpg
-            >> …
+     C:.
+      ├───Dataset
+      │   ├───Daun Jambu
+      │   └───Daun Nangka
+      ├───Image Classification Using ANN
+      ├───Image Classification Using CNN
+      └───Image Processing
+          ├───Ajust Image Contrast
+          │   └───Output
+          ├───Convert Image To Grayscale
+          │   └───Output
+          ├───Crop Image
+          │   └───Output
+          ├───Detect Image Edges
+          │   └───Output
+          ├───Resize Image (Aspect Ratio)
+          │   └───Output
+          ├───Resize Image (Ignore Aspect Ratio)
+          │   └───Output
+          └───Rotate Image
+              └───Output
 
 
 # To do List
