@@ -19,7 +19,11 @@
       │   ├───Daun Jambu
       │   └───Daun Nangka
       ├───Image Classification Using ANN
+      │   ├───Dataset
+      │   └───Example
       ├───Image Classification Using CNN
+      │   ├───Dataset
+      │   └───Example
       └───Image Processing
           ├───Ajust Image Contrast
           │   └───Output
@@ -29,6 +33,7 @@
           │   └───Output
           ├───Detect Image Edges
           │   └───Output
+          ├───Example
           ├───Resize Image (Aspect Ratio)
           │   └───Output
           ├───Resize Image (Ignore Aspect Ratio)
@@ -41,7 +46,7 @@
   - [x] Collect Dataset 
   - [x] Create Metadata 
   - [x] Processing Data
-  - [ ] Build Machine Learning
+  - [x] Build Machine Learning
   - [ ] Training Model
   - [ ] Testing & Evaluation
   - [ ] Deployment
