@@ -12,7 +12,23 @@
   2. Image Format : .jpg
   3. Image Dimension : 1600 X 1200 pixel
   
+# Image Processing
+  Ajust Image Contrast
+  --------------------
+   Digunakan untuk mengatur kecerahan gambar
 
+   /Image Processing/Ajust Image Contrast/`Ajust Image Contrast.py`
+  
+   Convert Image To Grayscale
+   --------------------------
+   Digunakan untuk mengubah gambar menjadi gray scale
+
+   /Image Processing/Convert Image To Grayscale/`Convert Image To Grayscale.py`
+
+
+   note*
+
+   Seluruh tool di folder `Image Processing` `*.py` menggunakan direktori `Dataset` sebagi sumber imagenya dan output disimpan di direktory folder `Output`
 # Repository Directory Details
      C:.
       ├───Dataset
