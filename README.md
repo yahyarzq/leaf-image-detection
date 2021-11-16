@@ -12,8 +12,8 @@
   2. Image Format : .jpg
   3. Image Dimension : 1600 X 1200 pixel
   
-  Dataset Directory Details
-  -------------------
+
+# Repository Directory Details
      C:.
       ├───Dataset
       │   ├───Daun Jambu
